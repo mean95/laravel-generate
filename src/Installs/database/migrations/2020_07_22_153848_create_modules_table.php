@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Core\app\Models\Module;
 
 class CreateModulesTable extends Migration
 {
@@ -27,20 +28,31 @@ class CreateModulesTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('modules')->insert([
-            [
-                'name' => 'AdminUsers',
-                'label' => 'Admin Users',
-                'name_db' => 'admin_users',
-                'view_col' => 'email',
-                'model' => 'AdminUser',
-                'controller' => 'AdminUserController',
-                'icon' => 'uil-users-alt',
-                'is_gen' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]
+        Module::create([
+            'name' => 'AdminUsers',
+            'label' => 'Admin Users',
+            'name_db' => 'admin_users',
+            'view_col' => 'email',
+            'model' => 'AdminUser',
+            'controller' => 'AdminUserController',
+            'icon' => 'uil-users-alt',
+            'is_gen' => 1,
         ]);
+
+//        DB::table('modules')->insert([
+//            [
+//                'name' => 'AdminUsers',
+//                'label' => 'Admin Users',
+//                'name_db' => 'admin_users',
+//                'view_col' => 'email',
+//                'model' => 'AdminUser',
+//                'controller' => 'AdminUserController',
+//                'icon' => 'uil-users-alt',
+//                'is_gen' => 1,
+//                'created_at' => now(),
+//                'updated_at' => now(),
+//            ]
+//        ]);
     }
 
     /**

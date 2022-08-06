@@ -39,7 +39,7 @@ class Install extends Command
 	 * Path root move file when install
 	 * @var string
 	 */
-	protected $root_move = 'platform/src/Installs/';
+	protected $root_move = 'vendor/mean95/laravel-generate/src/Installs/';
 
 	/**
 	 * Generate Whole structure for /admin
