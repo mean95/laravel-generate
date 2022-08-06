@@ -25,7 +25,7 @@ class Build extends Command
 	 *
 	 * @var string
 	 */
-	protected $toCore = 'platform/src/';
+	protected $toCore = 'core/';
 
 	/**
 	 * Path vendor core 
