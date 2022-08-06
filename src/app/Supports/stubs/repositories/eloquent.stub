@@ -1,0 +1,21 @@
+<?php
+
+
+namespace Core\app\Repositories\Eloquent;
+
+use Core\app\Models\__model_class_name__;
+use Core\app\Repositories\Contracts\__model_class_name__Interface;
+
+class __model_class_name__Eloquent extends BaseEloquent implements __model_class_name__Interface
+{
+
+    /**
+     * Specify Model class name
+     *
+     * @return string
+     */
+    public function model()
+    {
+        return __model_class_name__::class;
+    }
+}

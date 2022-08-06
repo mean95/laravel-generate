@@ -1,0 +1,82 @@
+
+li.m-module-back {
+    display: flex;
+    align-items: center;
+}
+
+li.m-module-back i:before {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--m-black);
+}
+
+.m-tab-module {
+    position: relative;
+}
+
+.m-add-field {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.m-profile-icon {
+    border-radius: 50%;
+    margin-top: 20px;
+    width: 70px;
+    height: 70px;
+    float: left;
+    background: var(--m-white);
+    text-align: center;
+    text-shadow: 1px 1px 6px var(--m-info);
+}
+
+.m-profile-icon i {
+    font-size: 42px;
+    margin-top: 14px;
+    text-align: center;
+}
+
+.m-module-info {
+    padding: 15px;
+    margin: 0;
+}
+
+.m-show-field {
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+.m-btn-delete {
+    color: var(--m-danger);
+    font-size: 17px;
+    margin-left: 0;
+    padding-left: 4px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+    border: 0px;
+    transition: all .3s ease;
+    margin-top: 7px;
+    float: right;
+}
+
+.m-btn-delete i:before {
+    font-weight: bold;
+    margin: 0;
+}
+
+.m-generate a,
+.m-generate button {
+    color: var(--m-white);
+    border-color: var(--m-white);
+    background-color: var(--m-success);
+}
+.m-generate a:hover,
+.m-generate button:hover {
+    border-color: var(--m-white);
+    background-color: var(--m-success);
+    opacity: .8;
+}

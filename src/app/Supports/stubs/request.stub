@@ -1,0 +1,20 @@
+<?php
+
+namespace Core\app\Http\Requests\Admin;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class __model_class_name__Request extends FormRequest
+{
+    public function authorize()
+    {
+        return true;
+    }
+
+    public function rules()
+    {
+        return [
+            __data_request__
+        ];
+    }
+}

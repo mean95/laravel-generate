@@ -1,0 +1,43 @@
+{
+    "name": "means/platform",
+    "description": "Included all of core of Means",
+    "type": "project",
+    "keywords": [
+        "Means",
+        "Means generate CRUD",
+        "Means platform generate CRUD"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Le Nghia",
+            "email": "nghia.dev95@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^2.10",
+        "tightenco/ziggy": "^0.8.1",
+        "barryvdh/laravel-debugbar": "^3.3",
+        "laravel/ui": "^2.1",
+        "laravelcollective/html": "^6.1",
+        "yajra/laravel-datatables-oracle":"~9.0",
+        "yajra/laravel-datatables":"^1.5",
+        "unisharp/laravel-filemanager": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Core\\app\\Providers\\BaseServiceProvider",
+                "Core\\app\\Providers\\RepositoryServiceProvider",
+                "Core\\app\\Providers\\DirectiveServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

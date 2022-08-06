@@ -1,0 +1,10 @@
+<?php
+
+
+namespace Core\app\Repositories\Contracts;
+
+
+interface __model_class_name__Interface
+{
+
+}

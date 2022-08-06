@@ -1,0 +1,48 @@
+@extends('core::admin.layouts.app')
+@push('link')
+
+@endpush
+@section('breadcrumb')
+    @include('core::admin.layouts.breadcrumb', [
+        'module' => '__module_label__',
+        'route' => route(getPrefix() . '.__db_table_name__.index'),
+        'edit' => trans('core::admin.button.create')
+    ])
+@stop
+@section('content')
+    <section class="content">
+        {{ 
+            Form::open([
+                'action' => '__model_class_name__Controller@store', 
+                'route' => getPrefix() . '.__db_table_name__.store',
+                'id' => 'validate_form___db_table_name__'
+            ]) 
+        }}
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-body">
+                        @mean_form($module)
+                        {{--
+                        __fields_input__ 
+                        --}}
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <div class="col-md-3">
+                @include('core::admin.common.button_save')
+            </div>
+        </div>
+        {{ Form::close() }}
+    </section>
+
+@stop
+@push('script')
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#validate_form___db_table_name__').validate();
+        });
+    </script>
+@endpush

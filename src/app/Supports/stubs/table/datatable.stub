@@ -1,0 +1,111 @@
+<?php
+
+namespace Core\app\DataTables;
+
+use Core\app\Models\__model_class_name__;
+use Core\app\Repositories\Contracts\__model_class_name__Interface;
+use Yajra\DataTables\Html\Button;
+use Yajra\DataTables\Html\Column;
+use Yajra\DataTables\Html\Editor\Editor;
+use Yajra\DataTables\Html\Editor\Fields;
+use Yajra\DataTables\Services\DataTable;
+
+class __model_class_name__DataTable extends DataTable
+{
+    /**
+     * @var __model_class_name__Interface
+     */
+    protected $__variable__Repository;
+
+    public function __construct(__model_class_name__Interface $__variable__Repository)
+    {
+        $this->__variable__Repository = $__variable__Repository;
+    }
+
+    /**
+     * Build DataTable class.
+     *
+     * @param mixed $query Results from query() method.
+     * @return \Yajra\DataTables\DataTableAbstract
+     */
+    public function dataTable($query)
+    {
+        return datatables()
+            ->eloquent($this->query())
+            ->editColumn('updated_at', function ($item) {
+                return date('d/m/Y', strtotime($item->updated_at));
+            })
+            ->editColumn('operations', function ($item) {
+                return view('core::admin.common.operation', [
+                    'item' => $item,
+                    'module' => '__db_table_name__',
+                ]);
+            })
+            ->editColumn('mean_checkbox', function ($item) {
+                return view('core::admin.common.checkbox', [
+                    'id' => $item->id,
+                ]);
+            });
+    }
+
+    /**
+     * Get query source of dataTable.
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function query()
+    {
+        $__variable__ = $this->__variable__Repository->select();
+        return $this->applyScopes($__variable__);
+    }
+
+    /**
+     * Optional method if you want to use html builder.
+     *
+     * @return \Yajra\DataTables\Html\Builder
+     * @throws \Throwable
+     */
+    public function html()
+    {
+        return $this->builder()
+            ->columns($this->getColumns())
+            ->minifiedAjax()
+            ->orderBy(2)
+            ->scrollX(true)
+            ->fixedColumnsLeftColumns(1);
+    }
+
+    /**
+     * Get columns.
+     *
+     * @return array
+     * @throws \Throwable
+     */
+    protected function getColumns()
+    {
+        return [
+            Column::computed('operations')
+                ->width(60)
+                ->addClass('text-center'),
+            Column::computed('mean_checkbox')
+                ->width(10)
+                ->title(tableCheckbox()),
+            'id' => [
+                'name' => 'id',
+                'title' => 'ID',
+                'class' => '',
+            ],
+            __column_field__'updated_at',
+        ];
+    }
+
+    /**
+     * Get filename for export.
+     *
+     * @return string
+     */
+    protected function filename()
+    {
+        return '__model_class_name___' . date('YmdHis');
+    }
+}

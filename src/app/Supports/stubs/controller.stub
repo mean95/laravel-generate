@@ -1,0 +1,128 @@
+<?php
+
+namespace Core\app\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Core\app\Repositories\Contracts\__model_class_name__Interface;
+use Core\app\DataTables\__model_class_name__DataTable;
+use Core\app\Http\Requests\Admin\__model_class_name__Request;
+use Illuminate\Http\Request;
+use Core\app\Repositories\Contracts\ModuleInterface;
+
+class __model_class_name__Controller extends Controller
+{
+    /**
+     * @var ModuleInterface
+     */
+    protected $moduleRepository;
+
+    /**
+     *
+     * @var __model_class_name__Interface
+     */
+    protected $__variable__Repository;
+
+    /**
+     * @param ModuleInterface $moduleRepository
+     * @param __model_class_name__Interface $__variable__Repository
+     */
+    public function  __construct(
+        ModuleInterface $moduleRepository,
+        __model_class_name__Interface $__variable__Repository
+    )
+    {
+        $this->moduleRepository = $moduleRepository;
+        $this->__variable__Repository = $__variable__Repository;
+    }
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @param __model_class_name__DataTable $dataTable
+     * @return \Illuminate\Http\View
+     */
+    public function index(__model_class_name__DataTable $dataTable)
+    {
+        return $dataTable->render('core::admin.__db_table_name__.index');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\View
+     */
+    public function create()
+    {
+        $module = $this->moduleRepository->get('__module_name__');
+        return view('core::admin.__db_table_name__.create', [
+            'module' => $module
+        ]);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  __model_class_name__Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(__model_class_name__Request $request)
+    {
+        $__variable__ = $this->__variable__Repository->create($request->except(['_token']));
+        if ($request['submit'] === 'save') {
+            return redirect()->route(getPrefix() . '.__db_table_name__.index')
+                ->with('success', trans('core::admin.flash_message.create_success'));
+        }
+        return redirect()->route(getPrefix() . '.__db_table_name__.edit', $__variable__->id)
+            ->with('success', trans('core::admin.flash_message.create_success'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param $id
+     * @return \Illuminate\Http\View
+     */
+    public function edit($id)
+    {
+        $__variable__ = $this->__variable__Repository->find($id);
+        $module = $this->moduleRepository->get('__module_name__', $__variable__);
+        return view('core::admin.__db_table_name__.edit', [
+            '__variable__' => $__variable__,
+            'module' => $module,
+        ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  __model_class_name__Request  $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(__model_class_name__Request $request, $id)
+    {
+        $__variable__ = $this->__variable__Repository->update($request->except(['_token']), $id);
+        if ($request['submit'] === 'save') {
+            return redirect()->route(getPrefix() . '.__db_table_name__.index')
+                ->with('success', trans('core::admin.flash_message.update_success'));
+        }
+        return redirect()->route(getPrefix() . '.__db_table_name__.edit', $id)
+            ->with('success', trans('core::admin.flash_message.update_success'));
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy($id)
+    {
+        $__variable__ = $this->__variable__Repository->destroy($id);
+        if ($__variable__) {
+            return back()->with('success', trans('core::admin.flash_message.delete_success'));
+        }
+        return back()->with('error', trans('core::admin.flash_message.failed'));
+    }
+}

@@ -1,0 +1,5 @@
+	
+        /* ================== __module_name__ ================== */
+        Route::resource('__db_table_name__', '__model_class_name__Controller');
+    });
+});

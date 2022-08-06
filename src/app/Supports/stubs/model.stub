@@ -1,0 +1,26 @@
+<?php
+/**
+ * Model generated using Admin
+ */
+
+namespace Core\app\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class __model_class_name__ extends Model
+{
+    use SoftDeletes;
+	
+	protected $table = '__db_table_name__';
+	
+	protected $hidden = [
+        
+    ];
+
+	protected $fillable = [
+		__fillable__
+	];
+
+	protected $dates = ['deleted_at'];
+}

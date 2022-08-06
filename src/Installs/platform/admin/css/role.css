@@ -1,0 +1,89 @@
+.uri-block {
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.19);
+    margin: 0 0 15px;
+}
+
+.block-get {
+    background: rgba(97,175,254,.1);
+    border-color: #61affe;
+}
+
+.block-post {
+    background: rgba(73,204,144,.1);
+    border-color: #49cc90;
+}
+
+.block-put {
+    background: rgba(252,161,48,.1);
+    border-color: #fca130;
+}
+
+.block-patch {
+    background: rgba(80,227,194,.1);
+    border-color: #50e3c2;
+}
+
+.block-delete {
+    background: rgba(249,62,62,.1);
+    border-color: #f93e3e;
+}
+
+.uri-block .uri-block-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.uri-block .uri-info .method {
+    background: #000;
+    border-radius: 3px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 80px;
+    padding: 6px 0;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    width: 80px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.uri-block.block-get .uri-info .method {
+    background: #61affe;
+}
+
+.uri-block.block-post .uri-info .method {
+    background: #49cc90;
+}
+
+.uri-block.block-put .uri-info .method {
+    background: #fca130;
+}
+
+.uri-block.block-patch .uri-info .method {
+    background: #50e3c2;
+}
+
+.uri-block.block-delete .uri-info .method {
+    background: #f93e3e;
+}
+
+.uri-block .uri-info .uri {
+    font-size: 15px;
+    color: #3b4151;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.uri-block .uri-checkbox > label {
+    margin-right: 0;
+}
