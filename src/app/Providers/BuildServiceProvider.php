@@ -1,8 +1,8 @@
 <?php
 
-namespace Core\app\Providers;
+namespace Install\Providers;
 
-use Install\app\Commands\Build;
+use Install\Commands\Build;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\Facades\Event;

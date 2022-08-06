@@ -1,6 +1,6 @@
 <?php
 
-namespace Install\app\Commands;
+namespace Install\Commands;
 
 use Illuminate\Console\Command;
 Use File;

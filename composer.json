@@ -19,13 +19,13 @@
     ],
     "autoload": {
         "psr-4": {
-            "Install\\": "src"
+            "Install\\": "src/app"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Install\\app\\Providers\\BuildServiceProvider"
+                "Install\\Providers\\BuildServiceProvider"
             ]
         }
     },
