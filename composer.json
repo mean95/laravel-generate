@@ -1,40 +1,31 @@
 {
-    "name": "mean95/laravel-generate",
-    "description": "Included all of core of Means",
+    "name": "mean95/build-generate",
+    "description": "build module laravel generate",
     "type": "project",
     "keywords": [
-        "Means",
-        "Means generate CRUD",
-        "Means platform generate CRUD"
+        "build",
+        "mean",
+        "mean95",
+        "generate",
+        "CRUD",
+        "admin"
     ],
     "license": "MIT",
     "authors": [
         {
-            "name": "Le Nghia",
-            "email": "nghia.dev95@gmail.com"
+            "name": "Mean",
+            "email": "mean.dev95@gmail.com"
         }
     ],
-    "require": {
-        "doctrine/dbal": "^2.10",
-        "tightenco/ziggy": "^0.8.1",
-        "barryvdh/laravel-debugbar": "^3.3",
-        "laravel/ui": "^2.1",
-        "laravelcollective/html": "^6.1",
-        "yajra/laravel-datatables-oracle":"~9.0",
-        "yajra/laravel-datatables":"^1.5",
-        "unisharp/laravel-filemanager": "^2.5"
-    },
     "autoload": {
         "psr-4": {
-            "Core\\": "src"
+            "Install\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Core\\app\\Providers\\BaseServiceProvider",
-                "Core\\app\\Providers\\RepositoryServiceProvider",
-                "Core\\app\\Providers\\DirectiveServiceProvider"
+                "Install\\app\\Providers\\BuildServiceProvider"
             ]
         }
     },

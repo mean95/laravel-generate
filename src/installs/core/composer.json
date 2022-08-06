@@ -1,0 +1,43 @@
+{
+    "name": "mean95/core",
+    "description": "This is the package used to generate the module with laravel. In order to shorten the time when doing it manually",
+    "type": "project",
+    "keywords": [
+        "Means",
+        "Means generate CRUD",
+        "Means platform generate CRUD"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Means",
+            "email": "mean.dev95@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/dbal": "^2.10",
+        "tightenco/ziggy": "^0.8.1",
+        "barryvdh/laravel-debugbar": "^3.3",
+        "laravel/ui": "^2.1",
+        "laravelcollective/html": "^6.1",
+        "yajra/laravel-datatables-oracle":"~9.0",
+        "yajra/laravel-datatables":"^1.5",
+        "unisharp/laravel-filemanager": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Core\\app\\Providers\\BaseServiceProvider",
+                "Core\\app\\Providers\\RepositoryServiceProvider",
+                "Core\\app\\Providers\\DirectiveServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
