@@ -24,23 +24,6 @@ class Install extends Command
 	 */
 	protected $description = 'Install Admin Package. Generate whole structure for /admin.';
 
-	var $modelsInstalled = [
-        "AdminMenu", "AdminUser", "AdminUserRole", "Permission", "Role", "RoleUser",
-    ];
-
-	/**
-	 * Root directory to receive files
-	 *
-	 * @var string
-	 */
-	protected $root_folder = 'platform/src/';
-
-	/**
-	 * Path root move file when install
-	 * @var string
-	 */
-	protected $root_move = 'vendor/mean95/laravel-generate/src/Installs/';
-
 	/**
 	 * Generate Whole structure for /admin
 	 *
@@ -49,12 +32,7 @@ class Install extends Command
 	public function handle()
 	{
 		try {
-			$this->info('LaraAdmin installation started...');
-
-			$from = base_path($this->root_move);
-			$to = base_path($this->root_folder);
-
-			$this->info('from: ' . $from . ' to: ' . $to);
+			$this->info('Admin installation started...');
 
 			$this->line("\nDB Assistant:");
 			if ($this->confirm("Want to set your Database config in the .env file ?", true)) {
@@ -78,41 +56,6 @@ class Install extends Command
 			}
 
 			if ($this->confirm("You are ready for the installation?", true)) {
-				// Copy folder app
-				$folderApp = $to . 'app';
-				if (!File::exists($folderApp)) {
-					File::makeDirectory($folderApp, 0777, true, true);
-				}
-				File::copyDirectory($from . 'app', $folderApp);
-
-				// Copy file config
-				$folderConfig = $to . 'config';
-				if (!File::exists($folderConfig)) {
-					File::makeDirectory($folderConfig, 0777, true, true);
-				}
-				File::copyDirectory($from . 'config', $folderConfig);
-
-				// Copy file migrate
-                $folderDatabase = $to . 'database';
-                if (!File::exists($folderDatabase)) {
-                    File::makeDirectory($folderDatabase, 0777, true, true);
-                }
-                File::copyDirectory($from . 'database', $folderDatabase);
-
-				//Copy file route
-				$folderRoutes = $to . 'routes';
-                if (!File::exists($folderRoutes)) {
-                    File::makeDirectory($folderRoutes, 0777, true, true);
-                }
-                File::copyDirectory($from . 'routes', $folderRoutes);
-
-				//Copy file css platform
-				$folderPlatform = public_path('platform');
-                if (!File::exists($folderPlatform)) {
-                    File::makeDirectory($folderPlatform, 0777, true, true);
-                }
-                File::copyDirectory($from . 'platform', $folderPlatform);
-
 				// Checking database
 				$this->line('Checking database connectivity...');
 				DB::connection()->reconnect();
@@ -145,8 +88,8 @@ class Install extends Command
 			}
 		} catch (Exception $e) {
 			$msg = $e->getMessage();
-            $this->error('LAInstall::handle exception: ' . $e);
-            throw new Exception('LAInstall::handle Unable to install : ' . $msg, 1);
+            $this->error('Install::handle exception: ' . $e);
+            throw new Exception('Install::handle Unable to install : ' . $msg, 1);
 		}
 	}
 
