@@ -1,24 +1,24 @@
 <?php
 
-namespace Core\app\Providers;
+namespace Core\Providers;
 
-use Core\app\Repositories\Contracts\AdminMenuInterface;
-use Core\app\Repositories\Contracts\AdminUserInterface;
-use Core\app\Repositories\Contracts\BaseInterface;
-use Core\app\Repositories\Contracts\ModuleFieldInterface;
-use Core\app\Repositories\Contracts\ModuleFieldTypeInterface;
-use Core\app\Repositories\Contracts\ModuleInterface;
-use Core\app\Repositories\Contracts\PermissionInterface;
-use Core\app\Repositories\Contracts\RoleInterface;
-use Core\app\Repositories\Eloquent\AdminMenuEloquent;
-use Core\app\Repositories\Eloquent\AdminUserEloquent;
-use Core\app\Repositories\Eloquent\BaseEloquent;
-use Core\app\Repositories\Eloquent\ModuleEloquent;
-use Core\app\Repositories\Eloquent\ModuleFieldEloquent;
+use Core\Repositories\Contracts\AdminMenuInterface;
+use Core\Repositories\Contracts\AdminUserInterface;
+use Core\Repositories\Contracts\BaseInterface;
+use Core\Repositories\Contracts\ModuleFieldInterface;
+use Core\Repositories\Contracts\ModuleFieldTypeInterface;
+use Core\Repositories\Contracts\ModuleInterface;
+use Core\Repositories\Contracts\PermissionInterface;
+use Core\Repositories\Contracts\RoleInterface;
+use Core\Repositories\Eloquent\AdminMenuEloquent;
+use Core\Repositories\Eloquent\AdminUserEloquent;
+use Core\Repositories\Eloquent\BaseEloquent;
+use Core\Repositories\Eloquent\ModuleEloquent;
+use Core\Repositories\Eloquent\ModuleFieldEloquent;
 use Illuminate\Support\ServiceProvider;
-use Core\app\Repositories\Eloquent\ModuleFieldTypeEloquent;
-use Core\app\Repositories\Eloquent\PermissionEloquent;
-use Core\app\Repositories\Eloquent\RoleEloquent;
+use Core\Repositories\Eloquent\ModuleFieldTypeEloquent;
+use Core\Repositories\Eloquent\PermissionEloquent;
+use Core\Repositories\Eloquent\RoleEloquent;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

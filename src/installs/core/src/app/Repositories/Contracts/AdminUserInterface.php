@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Core\app\Repositories\Contracts;
+namespace Core\Repositories\Contracts;
 
 
 interface AdminUserInterface

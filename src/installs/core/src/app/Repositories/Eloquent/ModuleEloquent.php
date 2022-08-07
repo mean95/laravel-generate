@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Core\app\Repositories\Eloquent;
+namespace Core\Repositories\Eloquent;
 
 
-use Core\app\Models\Module;
-use Core\app\Repositories\Contracts\ModuleInterface;
+use Core\Models\Module;
+use Core\Repositories\Contracts\ModuleInterface;
 use Illuminate\Support\Str;
-use Core\app\Traits\ModuleTrait;
+use Core\Traits\ModuleTrait;
 
 class ModuleEloquent extends BaseEloquent implements ModuleInterface
 {
@@ -84,7 +84,7 @@ class ModuleEloquent extends BaseEloquent implements ModuleInterface
         }
         $moduleName = ucfirst(Str::camel(Str::singular($moduleName)));
         if (file_exists(core_path('app/Models/' . $moduleName . '.php'))) {
-            $model = "Core\\app\\Models\\" . $moduleName;
+            $model = "Core\\Models\\" . $moduleName;
             return $model::count();
         }
         return trans('core::module.item_none');
@@ -153,7 +153,7 @@ class ModuleEloquent extends BaseEloquent implements ModuleInterface
             return [];
         }
         $moduleName = ucfirst(Str::camel(Str::singular($moduleName)));
-        $model = "\Core\app\Models\\" . $moduleName;
+        $model = "\Core\Models\\" . $moduleName;
         $result = $model::all();
         $data = [];
         foreach ($result as $row) {

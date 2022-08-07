@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Core\app\Repositories\Eloquent;
+namespace Core\Repositories\Eloquent;
 
-use Core\app\Models\__model_class_name__;
-use Core\app\Repositories\Contracts\__model_class_name__Interface;
+use Core\Models\__model_class_name__;
+use Core\Repositories\Contracts\__model_class_name__Interface;
 
 class __model_class_name__Eloquent extends BaseEloquent implements __model_class_name__Interface
 {

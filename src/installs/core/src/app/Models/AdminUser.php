@@ -1,10 +1,10 @@
 <?php
 
-namespace Core\app\Models;
+namespace Core\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Core\app\Traits\PermissionTrait;
+use Core\Traits\PermissionTrait;
 
 class AdminUser extends Authenticatable
 {

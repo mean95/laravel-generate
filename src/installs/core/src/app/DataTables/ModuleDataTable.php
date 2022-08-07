@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Core\app\DataTables;
+namespace Core\DataTables;
 
-use Core\app\Repositories\Contracts\ModuleInterface;
+use Core\Repositories\Contracts\ModuleInterface;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;

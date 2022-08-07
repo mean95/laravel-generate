@@ -1,15 +1,15 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin;
+namespace Core\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
-use Core\app\DataTables\RoleDataTable;
-use Core\app\Http\Requests\Admin\RoleRequest;
-use Core\app\Repositories\Contracts\PermissionInterface;
-use Core\app\Repositories\Contracts\RoleInterface;
+use Core\DataTables\RoleDataTable;
+use Core\Http\Requests\Admin\RoleRequest;
+use Core\Repositories\Contracts\PermissionInterface;
+use Core\Repositories\Contracts\RoleInterface;
 
 class RoleController extends Controller
 {

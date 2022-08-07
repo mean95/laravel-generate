@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\app\DataTables;
+namespace Core\DataTables;
 
-use Core\app\Models\Role;
-use Core\app\Repositories\Contracts\RoleInterface;
+use Core\Models\Role;
+use Core\Repositories\Contracts\RoleInterface;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Html\Editor\Editor;

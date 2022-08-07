@@ -1,17 +1,17 @@
 <?php
 
-namespace Core\app\Helpers;
+namespace Core\Helpers;
 
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
-use Core\app\Repositories\Contracts\ModuleInterface;
+use Core\Repositories\Contracts\ModuleInterface;
 
 class FormMaker
 {
 
     /**
-	  * Print form using blade directive @mean_form
+	  * Print form using blade directive @coreForm
 	 **/
 	public function form($module, $fields = [])
 	{

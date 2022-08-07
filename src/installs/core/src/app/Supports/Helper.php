@@ -1,5 +1,5 @@
 <?php
-namespace Core\app\Supports;
+namespace Core\Supports;
 
 use Illuminate\Support\Facades\File;
 

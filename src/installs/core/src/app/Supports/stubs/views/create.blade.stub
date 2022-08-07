@@ -22,7 +22,7 @@
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-body">
-                        @mean_form($module)
+                        @coreForm($module)
                         {{--
                         __fields_input__ 
                         --}}

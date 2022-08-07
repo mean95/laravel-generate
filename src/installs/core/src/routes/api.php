@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Core\app\Models\User;
+use Core\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ use Core\app\Models\User;
 // });
 Route::group([
     'prefix' => 'api',
-    'namespace' => 'Core\app\Http\Controllers\Api',
+    'namespace' => 'Core\Http\Controllers\Api',
 ], function () {
     Route::get('/users', 'UserController@index');
 });

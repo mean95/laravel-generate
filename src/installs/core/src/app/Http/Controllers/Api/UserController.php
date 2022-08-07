@@ -1,15 +1,15 @@
 <?php
 
-namespace Core\app\Http\Controllers\Api;
+namespace Core\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Core\app\Repositories\Contracts\AdminUserInterface;
+use Core\Repositories\Contracts\AdminUserInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
-use Core\app\DataTables\UserDataTable;
-use Core\app\Http\Requests\Admin\UserRequest;
-use Core\app\Repositories\Contracts\ModuleInterface;
-use Core\app\Repositories\Contracts\RoleInterface;
+use Core\DataTables\UserDataTable;
+use Core\Http\Requests\Admin\UserRequest;
+use Core\Repositories\Contracts\ModuleInterface;
+use Core\Repositories\Contracts\RoleInterface;
 
 class UserController extends Controller
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\app\Models;
+namespace Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Core\app\Models\AdminUser;
+use Core\Models\AdminUser;
 
 class AdminUserRole extends Model
 {

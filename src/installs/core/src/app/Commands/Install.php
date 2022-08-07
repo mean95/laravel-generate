@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\app\Commands;
+namespace Core\Commands;
 
-use Core\app\Models\AdminUser;
-use Core\app\Models\Role;
+use Core\Models\AdminUser;
+use Core\Models\Role;
 use Illuminate\Console\Command;
 Use File;
 use Illuminate\Support\Facades\DB;

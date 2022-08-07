@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin;
+namespace Core\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
@@ -9,8 +9,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
-use Core\app\Repositories\Contracts\ModuleFieldInterface;
-use Core\app\Repositories\Contracts\ModuleFieldTypeInterface;
+use Core\Repositories\Contracts\ModuleFieldInterface;
+use Core\Repositories\Contracts\ModuleFieldTypeInterface;
 
 class ModuleFieldController extends Controller
 {

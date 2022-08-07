@@ -1,12 +1,12 @@
 <?php
 
-namespace Core\app\Traits;
+namespace Core\Traits;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
-use Core\app\Repositories\Contracts\AdminMenuInterface;
+use Core\Repositories\Contracts\AdminMenuInterface;
 
 Trait ModuleTrait
 {
@@ -104,7 +104,7 @@ Trait ModuleTrait
 
         $inputFields = "";
         foreach ($module->moduleFields as $field) {
-            $inputFields .= "\t\t\t\t\t\t@mean_input($" . "module, '" . $field['column_name'] . "')\n";
+            $inputFields .= "\t\t\t\t\t\t@coreInput($" . "module, '" . $field['column_name'] . "')\n";
         }
         $inputFields = trim($inputFields);
         // ============================ Listing / create ============================

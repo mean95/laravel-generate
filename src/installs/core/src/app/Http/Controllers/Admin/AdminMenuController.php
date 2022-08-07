@@ -1,14 +1,14 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin;
+namespace Core\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use Core\app\Http\Requests\Admin\AdminMenuRequest;
-use Core\app\Repositories\Contracts\AdminMenuInterface;
-use Core\app\Repositories\Contracts\ModuleInterface;
+use Core\Http\Requests\Admin\AdminMenuRequest;
+use Core\Repositories\Contracts\AdminMenuInterface;
+use Core\Repositories\Contracts\ModuleInterface;
 
 class AdminMenuController extends Controller
 {

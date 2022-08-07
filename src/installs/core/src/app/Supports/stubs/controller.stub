@@ -1,13 +1,13 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin;
+namespace Core\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Core\app\Repositories\Contracts\__model_class_name__Interface;
-use Core\app\DataTables\__model_class_name__DataTable;
-use Core\app\Http\Requests\Admin\__model_class_name__Request;
+use Core\Repositories\Contracts\__model_class_name__Interface;
+use Core\DataTables\__model_class_name__DataTable;
+use Core\Http\Requests\Admin\__model_class_name__Request;
 use Illuminate\Http\Request;
-use Core\app\Repositories\Contracts\ModuleInterface;
+use Core\Repositories\Contracts\ModuleInterface;
 
 class __model_class_name__Controller extends Controller
 {

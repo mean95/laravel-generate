@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Core\app\Repositories\Eloquent;
+namespace Core\Repositories\Eloquent;
 
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Core\app\Models\Permission;
-use Core\app\Repositories\Contracts\PermissionInterface;
+use Core\Models\Permission;
+use Core\Repositories\Contracts\PermissionInterface;
 
 class PermissionEloquent extends BaseEloquent implements PermissionInterface
 {

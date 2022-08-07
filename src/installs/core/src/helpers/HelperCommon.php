@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Core\app\Facades\FormFacade;
-use Core\app\Facades\MenuFacade;
-use Core\app\Facades\SchemaManagerFacade;
-use Core\app\Repositories\Contracts\ModuleFieldTypeInterface;
+use Core\Facades\FormFacade;
+use Core\Facades\MenuFacade;
+use Core\Facades\SchemaManagerFacade;
+use Core\Repositories\Contracts\ModuleFieldTypeInterface;
 
 if (!function_exists('platform_path')) {
     /**

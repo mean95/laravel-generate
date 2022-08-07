@@ -1,8 +1,8 @@
 <?php
-namespace Core\app\Facades;
+namespace Core\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Core\app\Helpers\FormMaker;
+use Core\Helpers\FormMaker;
 
 class FormFacade extends Facade
 {

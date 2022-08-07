@@ -3,7 +3,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => getPrefix(), 'as' => getPrefix() . '.'], function () {
     Route::group([
-        'namespace' => 'Core\app\Http\Controllers\Admin\Auth',
+        'namespace' => 'Core\Http\Controllers\Admin\Auth',
         'middleware' => ['web'],
     ], function () {
         Route::get('/login', 'LoginController@showLoginForm')->name('login');
@@ -12,7 +12,7 @@ Route::group(['prefix' => getPrefix(), 'as' => getPrefix() . '.'], function () {
     });
 
     Route::group([
-        'namespace' => 'Core\app\Http\Controllers\Admin',
+        'namespace' => 'Core\Http\Controllers\Admin',
         'middleware' => ['web', 'admin'],
     ], function () {
         Route::get('/media', 'HomeController@media')->name('media');

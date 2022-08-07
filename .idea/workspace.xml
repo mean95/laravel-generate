@@ -1,13 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d8bf914d-9f5c-4b89-b1ac-e7115cb43f4b" name="Default Changelist" comment="" />
+    <list default="true" id="d8bf914d-9f5c-4b89-b1ac-e7115cb43f4b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-generate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-generate.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Commands/Install.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Commands/Install.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/DataTables/AdminUserDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/DataTables/AdminUserDataTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/DataTables/ModuleDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/DataTables/ModuleDataTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/DataTables/ModuleFieldDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/DataTables/ModuleFieldDataTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/DataTables/RoleDataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/DataTables/RoleDataTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Facades/FormFacade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Facades/FormFacade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Facades/MenuFacade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Facades/MenuFacade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Facades/SchemaManagerFacade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Facades/SchemaManagerFacade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Helpers/FormMaker.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Helpers/FormMaker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Helpers/SchemaManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Helpers/SchemaManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/AdminMenuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/AdminMenuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/AdminUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/ConfigController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/ConfigController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/CropController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/CropController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/DeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/DeleteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/DemoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/DemoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/DownloadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/DownloadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/FolderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/FolderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/ItemsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/ItemsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/LfmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/LfmController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/RedirectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/RedirectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/RenameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/RenameController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/ResizeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/ResizeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/UploadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/FileManager/UploadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/ModuleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/ModuleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/ModuleFieldController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/ModuleFieldController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Admin/RoleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Api/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Api/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Middleware/AdminAuthenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Middleware/AdminAuthenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Requests/Admin/AdminMenuRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Requests/Admin/AdminMenuRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Requests/Admin/AdminUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Requests/Admin/AdminUserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Requests/Admin/ModuleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Requests/Admin/ModuleRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Http/Requests/Admin/RoleRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Http/Requests/Admin/RoleRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/AdminMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/AdminMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/AdminUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/AdminUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/AdminUserRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/AdminUserRole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/ModuleField.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/ModuleField.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/ModuleFieldType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/ModuleFieldType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/Permission.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/Role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/RoleModule.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/RoleModule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Models/RoleUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Models/RoleUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Providers/BaseServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Providers/BaseServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Providers/DirectiveServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Providers/DirectiveServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/AdminMenuInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/AdminMenuInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/AdminUserInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/AdminUserInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/BaseInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/BaseInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/ModuleFieldInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/ModuleFieldInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/ModuleFieldTypeInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/ModuleFieldTypeInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/ModuleInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/ModuleInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/PermissionInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/PermissionInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/RoleInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Contracts/RoleInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/AdminMenuEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/AdminMenuEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/AdminUserEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/AdminUserEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/BaseEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/BaseEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/ModuleEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/ModuleEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/ModuleFieldEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/ModuleFieldEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/ModuleFieldTypeEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/ModuleFieldTypeEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/PermissionEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/PermissionEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/RoleEloquent.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Repositories/Eloquent/RoleEloquent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/controller.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/controller.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/model.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/model.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/repositories/appendProvider.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/repositories/appendProvider.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/repositories/contract.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/repositories/contract.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/repositories/eloquent.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/repositories/eloquent.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/request.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/request.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/table/datatable.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/table/datatable.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/views/create.blade.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/views/create.blade.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/views/edit.blade.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Supports/stubs/views/edit.blade.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Traits/ModuleFieldTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Traits/ModuleFieldTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Traits/ModuleTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Traits/ModuleTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/app/Traits/PermissionTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/app/Traits/PermissionTrait.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/database/migrations/2020_07_22_153950_create_module_field_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/database/migrations/2020_07_22_153950_create_module_field_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/database/migrations/2020_07_22_154159_create_module_fields_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/database/migrations/2020_07_22_154159_create_module_fields_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/database/migrations/2020_07_22_155216_create_admin_menus_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/database/migrations/2020_07_22_155216_create_admin_menus_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/database/migrations/2020_08_26_135954_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/database/migrations/2020_08_26_135954_create_roles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/helpers/HelperCommon.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/helpers/HelperCommon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/installs/core/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/installs/core/src/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -23,7 +114,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test_generate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -35,6 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659808602498</updated>
       <workItem from="1659808604323" duration="1200000" />
+      <workItem from="1659883670209" duration="3494000" />
     </task>
     <servers />
   </component>
@@ -51,5 +143,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Core\app\Repositories\Eloquent;
+namespace Core\Repositories\Eloquent;
 
 
 use Illuminate\Support\Facades\DB;
-use Core\app\Models\ModuleFieldType;
-use Core\app\Repositories\Contracts\ModuleFieldTypeInterface;
+use Core\Models\ModuleFieldType;
+use Core\Repositories\Contracts\ModuleFieldTypeInterface;
 
 class ModuleFieldTypeEloquent extends BaseEloquent implements ModuleFieldTypeInterface
 {

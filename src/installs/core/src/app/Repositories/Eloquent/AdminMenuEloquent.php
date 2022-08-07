@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Core\app\Repositories\Eloquent;
+namespace Core\Repositories\Eloquent;
 
 
-use Core\app\Models\AdminMenu;
-use Core\app\Repositories\Contracts\AdminMenuInterface;
+use Core\Models\AdminMenu;
+use Core\Repositories\Contracts\AdminMenuInterface;
 use Illuminate\Support\Facades\DB;
-use Core\app\Repositories\Contracts\ModuleInterface;
+use Core\Repositories\Contracts\ModuleInterface;
 
 class AdminMenuEloquent extends BaseEloquent implements AdminMenuInterface
 {

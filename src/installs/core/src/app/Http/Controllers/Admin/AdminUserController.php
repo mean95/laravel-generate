@@ -1,17 +1,17 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin;
+namespace Core\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
-use Core\app\DataTables\AdminUserDataTable;
-use Core\app\Http\Requests\Admin\AdminUserRequest;
-use Core\app\Http\Requests\Admin\UserRequest;
-use Core\app\Repositories\Contracts\AdminUserInterface;
-use Core\app\Repositories\Contracts\RoleInterface;
+use Core\DataTables\AdminUserDataTable;
+use Core\Http\Requests\Admin\AdminUserRequest;
+use Core\Http\Requests\Admin\UserRequest;
+use Core\Repositories\Contracts\AdminUserInterface;
+use Core\Repositories\Contracts\RoleInterface;
 
 class AdminUserController extends Controller
 {

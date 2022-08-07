@@ -1,8 +1,8 @@
 <?php
 
-namespace Core\app\Http\Requests\Admin;
+namespace Core\Http\Requests\Admin;
 
-use Core\app\Repositories\Contracts\AdminMenuInterface;
+use Core\Repositories\Contracts\AdminMenuInterface;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AdminMenuRequest extends FormRequest

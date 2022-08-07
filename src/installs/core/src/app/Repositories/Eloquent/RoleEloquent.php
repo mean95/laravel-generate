@@ -1,14 +1,14 @@
 <?php
 
 
-namespace Core\app\Repositories\Eloquent;
+namespace Core\Repositories\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use Core\app\Models\Role;
-use Core\app\Repositories\Contracts\PermissionInterface;
-use Core\app\Repositories\Contracts\RoleInterface;
+use Core\Models\Role;
+use Core\Repositories\Contracts\PermissionInterface;
+use Core\Repositories\Contracts\RoleInterface;
 
 class RoleEloquent extends BaseEloquent implements RoleInterface
 {

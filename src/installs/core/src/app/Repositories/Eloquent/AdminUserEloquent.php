@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Core\app\Repositories\Eloquent;
+namespace Core\Repositories\Eloquent;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Core\app\Models\AdminUser;
-use Core\app\Repositories\Contracts\AdminUserInterface;
+use Core\Models\AdminUser;
+use Core\Repositories\Contracts\AdminUserInterface;
 
 class AdminUserEloquent extends BaseEloquent implements AdminUserInterface
 {

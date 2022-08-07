@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin\FileManager;
+namespace Core\Http\Controllers\Admin\FileManager;
 
 use Illuminate\Support\Facades\Storage;
 use UniSharp\LaravelFilemanager\Events\FolderIsRenaming;

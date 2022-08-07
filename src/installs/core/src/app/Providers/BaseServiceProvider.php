@@ -1,20 +1,20 @@
 <?php
 
-namespace Core\app\Providers;
+namespace Core\Providers;
 
-use Core\app\Commands\Install;
+use Core\Commands\Install;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use Core\app\Facades\MenuFacade;
-use Core\app\Facades\FormFacade;
-use Core\app\Supports\Helper;
-use Core\app\Http\Middleware\AdminAuthenticate;
+use Core\Facades\MenuFacade;
+use Core\Facades\FormFacade;
+use Core\Supports\Helper;
+use Core\Http\Middleware\AdminAuthenticate;
 
 /**
  * Class BaseServiceProvider
- * @package Core\app\Providers
+ * @package Core\Providers
  * @author Means
  * @since 1.0
  */

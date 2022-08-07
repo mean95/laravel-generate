@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Core\app\Traits;
+namespace Core\Traits;
 
 
 use Illuminate\Support\Facades\Auth;
-use Core\app\Repositories\Contracts\PermissionInterface;
-use Core\app\Repositories\Contracts\RoleInterface;
+use Core\Repositories\Contracts\PermissionInterface;
+use Core\Repositories\Contracts\RoleInterface;
 
 trait PermissionTrait
 {

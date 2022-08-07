@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin\FileManager;
+namespace Core\Http\Controllers\Admin\FileManager;
 
 use Intervention\Image\Facades\Image;
 use UniSharp\LaravelFilemanager\Events\ImageIsResizing;

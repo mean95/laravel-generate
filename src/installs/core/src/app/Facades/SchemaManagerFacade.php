@@ -1,8 +1,8 @@
 <?php
-namespace Core\app\Facades;
+namespace Core\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Core\app\Helpers\SchemaManager;
+use Core\Helpers\SchemaManager;
 
 class SchemaManagerFacade extends Facade
 {

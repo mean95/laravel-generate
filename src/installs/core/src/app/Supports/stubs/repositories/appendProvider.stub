@@ -1,6 +1,6 @@
         $this->app->bind(
-            \Core\app\Repositories\Contracts\__model_class_name__Interface::class, 
-            \Core\app\Repositories\Eloquent\__model_class_name__Eloquent::class
+            \Core\Repositories\Contracts\__model_class_name__Interface::class, 
+            \Core\Repositories\Eloquent\__model_class_name__Eloquent::class
         );
     }
 }        

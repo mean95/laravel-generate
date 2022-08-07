@@ -1,8 +1,8 @@
 <?php
-namespace Core\app\Facades;
+namespace Core\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Core\app\Repositories\Contracts\AdminMenuInterface;
+use Core\Repositories\Contracts\AdminMenuInterface;
 
 class MenuFacade extends Facade
 {

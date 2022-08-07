@@ -1,16 +1,16 @@
 <?php
 
 
-namespace Core\app\Repositories\Eloquent;
+namespace Core\Repositories\Eloquent;
 
 use Illuminate\Support\Facades\DB;
-use Core\app\Models\ModuleField;
+use Core\Models\ModuleField;
 use Illuminate\Container\Container as Application;
-use Core\app\Repositories\Contracts\ModuleFieldInterface;
-use Core\app\Traits\ModuleFieldTrait;
+use Core\Repositories\Contracts\ModuleFieldInterface;
+use Core\Traits\ModuleFieldTrait;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
-use Core\app\Repositories\Contracts\ModuleInterface;
+use Core\Repositories\Contracts\ModuleInterface;
 
 class ModuleFieldEloquent extends BaseEloquent implements ModuleFieldInterface
 {

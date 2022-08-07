@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\app\Helpers;
+namespace Core\Helpers;
 
 
 use Illuminate\Support\Facades\DB;

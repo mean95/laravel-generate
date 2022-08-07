@@ -3,7 +3,7 @@
  * Model generated using Admin
  */
 
-namespace Core\app\Models;
+namespace Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

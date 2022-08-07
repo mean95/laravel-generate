@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\app\Models;
+namespace Core\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Core\app\Traits\ModuleTrait;
+use Core\Traits\ModuleTrait;
 
 class Module extends Model
 {

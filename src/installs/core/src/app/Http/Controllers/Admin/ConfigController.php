@@ -1,9 +1,9 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin;
+namespace Core\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Core\app\Models\Config;
+use Core\Models\Config;
 use Illuminate\Http\Request;
 
 class ConfigController extends Controller

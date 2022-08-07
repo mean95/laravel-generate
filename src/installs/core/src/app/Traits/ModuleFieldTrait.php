@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Core\app\Traits;
+namespace Core\Traits;
 
 
 use Illuminate\Support\Facades\DB;

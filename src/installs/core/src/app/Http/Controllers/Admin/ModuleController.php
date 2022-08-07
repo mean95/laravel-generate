@@ -1,16 +1,16 @@
 <?php
 
-namespace Core\app\Http\Controllers\Admin;
+namespace Core\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
-use Core\app\DataTables\ModuleDataTable;
-use Core\app\DataTables\ModuleFieldDataTable;
-use Core\app\Http\Requests\Admin\ModuleRequest;
-use Core\app\Repositories\Contracts\AdminMenuInterface;
-use Core\app\Repositories\Contracts\ModuleInterface;
+use Core\DataTables\ModuleDataTable;
+use Core\DataTables\ModuleFieldDataTable;
+use Core\Http\Requests\Admin\ModuleRequest;
+use Core\Repositories\Contracts\AdminMenuInterface;
+use Core\Repositories\Contracts\ModuleInterface;
 use Route;
 
 class ModuleController extends Controller
