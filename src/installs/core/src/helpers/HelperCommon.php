@@ -24,7 +24,7 @@ if (!function_exists('core_path')) {
      */
     function core_path($path = null): string
     {
-        return platform_path('src' . DIRECTORY_SEPARATOR . $path);
+        return base_path('core/src' . DIRECTORY_SEPARATOR . $path);
     }
 }
 
