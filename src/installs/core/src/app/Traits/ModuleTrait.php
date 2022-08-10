@@ -283,10 +283,14 @@ Trait ModuleTrait
             $min = $field->minlength ? 'min:' . $field->minlength . '|' : '';
             $max = $field->maxlength ? 'max:' . $field->maxlength : '';
             $required = $field->required ? 'required|' : 'nullable|';
+            $requiredTextarea = $field->required ? 'required' : 'nullable';
             switch ($fieldType) {
                 case 'Address':
                 case 'Editor':
                     $var .= "'" . $required . $min . $max;
+                    break;
+                case 'Textarea':
+                    $var .= "'" . $requiredTextarea;
                     break;
                 case 'Radio':
                 case 'Dropdown':

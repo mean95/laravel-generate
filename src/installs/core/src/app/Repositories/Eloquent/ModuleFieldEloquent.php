@@ -140,10 +140,15 @@ class ModuleFieldEloquent extends BaseEloquent implements ModuleFieldInterface
             }
         }
         if (empty($attributes['maxlength'])) {
-            $maxlength =  255;
+            $maxlength = 255;
             if (in_array($attributes['module_field_type_id'], config('core.maxlength_field'))) {
                 $maxlength = 11;
             }
+
+            if (in_array($attributes['module_field_type_id'], config('core.not_max_field'))) {
+                $maxlength = 0;
+            }
+
             $dataFields['maxlength'] = $maxlength;
         } else {
             $dataFields['maxlength'] = $attributes['maxlength'];

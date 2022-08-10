@@ -7,6 +7,9 @@ return [
     'min_max_field' => [
         1, 4, 7, 9, 11, 13, 14, 16, 18, 19, 21
     ],
+    'not_max_field' => [
+        20, 12
+    ],
     'popup_field' => [
         2, 8, 15, 17
     ],
