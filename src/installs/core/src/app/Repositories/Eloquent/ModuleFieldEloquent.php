@@ -128,27 +128,26 @@ class ModuleFieldEloquent extends BaseEloquent implements ModuleFieldInterface
         $dataFields['required'] = !empty($attributes['required']) ? 1 : 0;
         $dataFields['default_value'] = !empty($attributes['default_value']) ? $attributes['default_value'] : '';
         $dataFields['minlength'] = !empty($attributes['minlength']) ? $attributes['minlength'] : 0;
-        if (!empty($attributes['default_value'])) {
-            if ($attributes['module_field_type_id'] == 5) {
-                $dataFields['default_value'] = date('Y-m-d');
-            }
-            if ($attributes['module_field_type_id'] == 6) {
-                $dataFields['default_value'] = date('Y-m-d H:i:s');
-            }
-            if (in_array($attributes['module_field_type_id'], config('core.default_value_int'))) {
-                $dataFields['default_value'] = is_int($attributes['default_value']) ? $attributes['default_value'] : 1;
-            }
+        if ($attributes['module_field_type_id'] == 5) {
+            $dataFields['default_value'] = date('Y-m-d');
+        }
+        if ($attributes['module_field_type_id'] == 6) {
+            $dataFields['default_value'] = date('Y-m-d H:i:s');
+        }
+        if (in_array($attributes['module_field_type_id'], config('core.default_value_int'))) {
+            $dataFields['default_value'] = $attributes['default_value'] ?? 1;
+        }
+        if ($attributes['module_field_type_id'] == 3) {
+            $dataFields['default_value'] = $attributes['default_value'] ?? 0;
         }
         if (empty($attributes['maxlength'])) {
             $maxlength = 255;
             if (in_array($attributes['module_field_type_id'], config('core.maxlength_field'))) {
                 $maxlength = 11;
             }
-
             if (in_array($attributes['module_field_type_id'], config('core.not_max_field'))) {
                 $maxlength = 0;
             }
-
             $dataFields['maxlength'] = $maxlength;
         } else {
             $dataFields['maxlength'] = $attributes['maxlength'];

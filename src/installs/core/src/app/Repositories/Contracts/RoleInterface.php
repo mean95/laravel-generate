@@ -29,4 +29,10 @@ interface RoleInterface
      * @return array
      */
     public function getRolesByUserId($id): array;
+
+    /**
+     * get role not super
+     * @return mixed
+     */
+    public function getRolesNotSuper();
 }

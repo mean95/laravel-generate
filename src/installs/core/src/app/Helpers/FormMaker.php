@@ -486,6 +486,7 @@ class FormMaker
     {
         $params['cols'] = 30;
 		$params['rows'] = 3;
+        unset($params['maxlength']);
         return view('core::admin.common.input_forms.input_textarea', [
             'fieldName' => $fieldName,
             'options' => $options,

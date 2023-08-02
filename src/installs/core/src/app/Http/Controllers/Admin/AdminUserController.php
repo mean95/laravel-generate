@@ -57,7 +57,7 @@ class AdminUserController extends Controller
      */
     public function create(): View
     {
-        $roles = $this->roleRepository->all();
+        $roles = $this->roleRepository->getRolesNotSuper();
         return view('core::admin.admin_users.create', [
             'roles' => $roles,
         ]);

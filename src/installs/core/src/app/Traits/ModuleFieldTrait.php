@@ -22,6 +22,14 @@ trait ModuleFieldTrait
         $var = '';
         switch ($fieldType) {
             case 'Textarea':
+                $var = $table->text($field->column_name);
+                if ($field->default_value !== '') {
+                    $var->default($field->default_value);
+                }
+                if ($field->required === 0) {
+                    $var->nullable();
+                }
+                break;
             case 'Address':
                 if ($field->maxlength === 0) {
                     $var = $table->text($field->column_name);
@@ -276,6 +284,10 @@ trait ModuleFieldTrait
         }
         switch ($fieldType) {
             case 'Textarea':
+                $var = $table->text($field->column_name)->change();
+                $this->setDefaultValue($field->default_value, $var);
+                $this->setRequiredValue($field->required, $var);
+                break;
             case 'Address':
                 if ($field->maxlength === 0) {
                     $var = $table->text($field->column_name)->change();

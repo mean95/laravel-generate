@@ -15,8 +15,9 @@ interface ModuleFieldTypeInterface
 
     /**
      * Get all module field types with page edit
+     * @param $table
+     * @param $fieldId
      * @return array
-     * @author Means
      */
-    public function getModuleFieldTypeEdit($table): array;
+    public function getModuleFieldTypeEdit($table, $fieldId): array;
 }

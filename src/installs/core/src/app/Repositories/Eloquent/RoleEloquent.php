@@ -93,4 +93,15 @@ class RoleEloquent extends BaseEloquent implements RoleInterface
             })
             ->pluck('name')->toArray();
     }
+
+    /**
+     * get role not super
+     * @return mixed
+     */
+    public function getRolesNotSuper()
+    {
+        return $this->findWhere([
+            ['name', '<>', config('core.permission.super_admin')]
+        ], ['id', 'name']);
+    }
 }

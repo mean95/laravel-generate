@@ -103,8 +103,8 @@ abstract class BaseEloquent implements BaseInterface
 
     /**
      * @param array $where
-     * @param array $columns
-     * @return string
+     * @param $columns
+     * @return mixed
      */
     public function findWhere(array $where, $columns = ['*'])
     {
@@ -216,11 +216,10 @@ abstract class BaseEloquent implements BaseInterface
      * Update a entity in repository by id
      *
      * @param array $attributes
-     * @param       $id
+     * @param $id
      *
      * @return mixed
-     * @throws ValidatorException
-     *
+     * 
      */
     public function update(array $attributes, $id)
     {

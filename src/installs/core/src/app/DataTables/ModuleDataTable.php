@@ -72,7 +72,8 @@ class ModuleDataTable extends DataTable
             ->columns($this->getColumns())
             ->minifiedAjax()
             ->orderBy(0)
-            ->scrollX(true);
+            ->scrollX(true)
+            ->pageLength(50);
     }
 
     /**

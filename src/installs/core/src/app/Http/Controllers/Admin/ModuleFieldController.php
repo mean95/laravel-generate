@@ -59,7 +59,8 @@ class ModuleFieldController extends Controller
     public function edit($id): View
     {
         $field = $this->moduleField->with('module')->find($id);
-        $moduleFieldTypes = app(ModuleFieldTypeInterface::class)->getModuleFieldTypeEdit($field->module->name_db);
+        $moduleFieldTypes = app(ModuleFieldTypeInterface::class)
+            ->getModuleFieldTypeEdit($field->module->name_db, $field->module_field_type_id);
         $tables = listTables();
         return view('core::admin.modules.fields.edit', [
             'field' => $field,

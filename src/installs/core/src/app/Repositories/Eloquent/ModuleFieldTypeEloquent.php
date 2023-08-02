@@ -33,18 +33,22 @@ class ModuleFieldTypeEloquent extends BaseEloquent implements ModuleFieldTypeInt
     /**
      * Get all module field types with page edit
      * @param $table
+     * @param $fieldId
      * @return array
-     * @author Means
      */
-    public function getModuleFieldTypeEdit($table): array
+    public function getModuleFieldTypeEdit($table, $fieldId): array
     {
         $moduleFieldTypes = $this->getModuleFieldTypes();
         $moduleFieldTypes = array_diff($moduleFieldTypes, ["DateTime"]);
         $dataModule = DB::table($table)->select('id')->first();
+        $arrayFields = ['Address', 'Textarea', 'Email', 'Editor', 'Mobile', 'MultiSelect', 'Password', 'String', 'TagInput', 'URL'];
+        if (!empty($moduleFieldTypes[$fieldId])) {
+            $arrayFields[] = $moduleFieldTypes[$fieldId];
+        }
         return !$dataModule
             ? $moduleFieldTypes
-            : collect($moduleFieldTypes)->filter(function ($item) {
-                return in_array($item, ['Address', 'Textarea', 'Email', 'Editor', 'Mobile', 'MultiSelect', 'Password', 'String', 'TagInput', 'URL']);
+            : collect($moduleFieldTypes)->filter(function ($item) use ($arrayFields) {
+                return in_array($item, $arrayFields);
             })->toArray();
     }
 }
