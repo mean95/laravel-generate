@@ -202,7 +202,6 @@ class ModuleController extends Controller
     {
         $module = $this->moduleRepository->with('moduleFields')->find($id);
         $config = $module->generateConfig();
-        $module->deleteMigrateBeforeUpdate();
         $module->generateMigration($config);
         return back()->with('success', trans('core::module.generate_success'));
     }

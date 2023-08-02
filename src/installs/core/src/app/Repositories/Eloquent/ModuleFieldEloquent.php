@@ -129,10 +129,14 @@ class ModuleFieldEloquent extends BaseEloquent implements ModuleFieldInterface
         $dataFields['default_value'] = !empty($attributes['default_value']) ? $attributes['default_value'] : '';
         $dataFields['minlength'] = !empty($attributes['minlength']) ? $attributes['minlength'] : 0;
         if ($attributes['module_field_type_id'] == 5) {
-            $dataFields['default_value'] = date('Y-m-d');
+            $dataFields['default_value'] = !empty($attributes['default_value']) 
+                ? date('Y-m-d', $attributes['default_value']) 
+                : '';
         }
         if ($attributes['module_field_type_id'] == 6) {
-            $dataFields['default_value'] = date('Y-m-d H:i:s');
+            $dataFields['default_value'] = !empty($attributes['default_value']) 
+                ? date('Y-m-d H:i:s', $attributes['default_value'])
+                : '';
         }
         if (in_array($attributes['module_field_type_id'], config('core.default_value_int'))) {
             $dataFields['default_value'] = $attributes['default_value'] ?? 1;

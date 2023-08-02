@@ -489,9 +489,7 @@ trait ModuleFieldTrait
     public function setUniqueValue($field, $var, $module, $table)
     {
         $uniqueKey = $module->name_db . '_'. strtolower($field->column_name) . '_unique';
-        if (!$field->unique) {
-            $table->dropUnique($uniqueKey);
-        } else {
+        if ($field->unique) {
             if (!in_array($uniqueKey, schemaManager()->listIndexes($module->name_db))) {
                 $var->unique();
             }
