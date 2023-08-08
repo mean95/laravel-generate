@@ -2,23 +2,23 @@
 
 return [
     'maxlength_field' => [
-        4, 7, 11, 13
+        'Currency', 'Decimal', 'Float', 'Integer',
     ],
     'min_max_field' => [
-        1, 4, 7, 9, 11, 13, 14, 16, 18, 19, 21
+        'Address', 'Currency', 'Decimal', 'Email', 'Float', 'Integer', 'Mobile', 'Password', 'String', 'TagInput', 'URL',
     ],
     'not_max_field' => [
-        20, 12,
+        'Editor', 'Textarea',
     ],
     'popup_field' => [
-        2, 8, 15, 17
+        'Checkbox', 'Dropdown', 'MultiSelect', 'Radio'
     ],
     'unique_field' => [
-        5, 6, 9, 11, 13, 14, 18,
+        'Date', 'DateTime', 'Email', 'Float', 'Integer', 'Mobile', 'String',
     ],
-    'tag_input' => 19,
+    'tag_input' => 'TagInput',
     'default_value_int' => [
-       4, 7, 10, 11, 13,
+       'Currency', 'Decimal', 'Float', 'Integer',
     ],
     'permission' => [
         'super_admin' => 'SUPER_ADMIN',

@@ -77,7 +77,7 @@
                                 ])
                             }}
                         </div>
-                        @if(in_array($field->module_field_type_id, config('core.min_max_field')))
+                        @if(in_array($field->moduleFieldType->name, config('core.min_max_field')))
                             <div class="form-group m-min">
                                 {{ Form::label('minlength', trans('core::module.form.min.label')) }}
                                 {{ Form::text('minlength', old('minlength', $field->minlength), [
@@ -106,7 +106,7 @@
                                 }}
                             </label>
                         </div>
-                        @if(in_array($field->module_field_type_id, config('core.popup_field')))
+                        @if(in_array($field->moduleFieldType->name, config('core.popup_field')))
                             <div class="form-group m-popup-val">
                                 {{ Form::label('popup_vals', trans('core::module.table.value') . ' :') }}
                                 <div class="radio">
@@ -152,7 +152,7 @@
                                 @endif
                             </div>
                         @endif
-                        @if($field->module_field_type_id === config('core.tag_input'))
+                        @if($field->moduleFieldType->name === config('core.tag_input'))
                             <div class="form-group m-popup-val">
                                 {{ Form::label('popup_vals', trans('core::module.table.tag_input')) }}
                                 {{

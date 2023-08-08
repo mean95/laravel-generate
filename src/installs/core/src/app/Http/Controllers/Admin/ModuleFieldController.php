@@ -58,7 +58,7 @@ class ModuleFieldController extends Controller
      */
     public function edit($id): View
     {
-        $field = $this->moduleField->with('module')->find($id);
+        $field = $this->moduleField->with(['module', 'moduleFieldType'])->find($id);
         $moduleFieldTypes = app(ModuleFieldTypeInterface::class)
             ->getModuleFieldTypeEdit($field->module->name_db, $field->module_field_type_id);
         $tables = listTables();

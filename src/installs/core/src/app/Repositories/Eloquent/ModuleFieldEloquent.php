@@ -119,6 +119,8 @@ class ModuleFieldEloquent extends BaseEloquent implements ModuleFieldInterface
      */
     public function getDataFields($attributes)
     {
+        $fieldType = app(ModuleFieldTypeInterface::class)->find($attributes['module_field_type_id']);
+        $fieldTypeName = $fieldType->name ?? '';
         $dataFields = [];
         $dataFields['column_name'] = Str::slug(strtolower($attributes['column_name']), '_');
         $dataFields['label'] = $attributes['label'];
@@ -126,38 +128,36 @@ class ModuleFieldEloquent extends BaseEloquent implements ModuleFieldInterface
         $dataFields['module_field_type_id'] = $attributes['module_field_type_id'];
         $dataFields['unique'] = !empty($attributes['unique']) ? 1 : 0;
         $dataFields['required'] = !empty($attributes['required']) ? 1 : 0;
-        $dataFields['default_value'] = !empty($attributes['default_value']) ? $attributes['default_value'] : '';
+        $dataFields['default_value'] = $attributes['default_value'] !== '' ? $attributes['default_value'] : '';
         $dataFields['minlength'] = !empty($attributes['minlength']) ? $attributes['minlength'] : 0;
-        if ($attributes['module_field_type_id'] == 5) {
-            $dataFields['default_value'] = !empty($attributes['default_value']) 
-                ? date('Y-m-d', $attributes['default_value']) 
+        if ($fieldTypeName === 'Date') {
+            $dataFields['default_value'] = !empty($attributes['default_value'])
+                ? date('Y-m-d', $attributes['default_value'])
                 : '';
         }
-        if ($attributes['module_field_type_id'] == 6) {
-            $dataFields['default_value'] = !empty($attributes['default_value']) 
+        if ($fieldTypeName === 'DateTime') {
+            $dataFields['default_value'] = !empty($attributes['default_value'])
                 ? date('Y-m-d H:i:s', $attributes['default_value'])
                 : '';
         }
-        if (in_array($attributes['module_field_type_id'], config('core.default_value_int'))) {
-            $dataFields['default_value'] = $attributes['default_value'] ?? 1;
-        }
-        if ($attributes['module_field_type_id'] == 3) {
+        
+        if ($fieldTypeName === 'Boolean') {
             $dataFields['default_value'] = $attributes['default_value'] ?? 0;
         }
         if (empty($attributes['maxlength'])) {
             $maxlength = 255;
-            if (in_array($attributes['module_field_type_id'], config('core.maxlength_field'))) {
+            if (in_array($fieldTypeName, config('core.maxlength_field'))) {
                 $maxlength = 11;
             }
-            if (in_array($attributes['module_field_type_id'], config('core.not_max_field'))) {
+            if (in_array($fieldTypeName, config('core.not_max_field'))) {
                 $maxlength = 0;
             }
             $dataFields['maxlength'] = $maxlength;
         } else {
             $dataFields['maxlength'] = $attributes['maxlength'];
         }
-        if (in_array($attributes['module_field_type_id'], config('core.popup_field'))
-            || $attributes['module_field_type_id'] == config('core.tag_input')) {
+        if (in_array($fieldTypeName, config('core.popup_field'))
+            || $fieldTypeName === config('core.tag_input')) {
             if(!empty($attributes['popup_value_type']) && $attributes['popup_value_type'] === "table") {
                 $dataFields['popup_val'] = "@".$attributes['popup_val_table'];
             } else {
