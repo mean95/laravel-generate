@@ -16,7 +16,7 @@
                             </div>
                             <div class="col-md-9">
                                 <a class="text-white"
-                                   @if($module->is_gen)
+                                   @if($module->is_gen  && Route::has(getPrefix() . '.' . $module->name_db . '.index'))
                                         href="{{ route(getPrefix() . '.' . $module->name_db . '.index') }}"
                                    @else
                                        href="javascript:void(0)"

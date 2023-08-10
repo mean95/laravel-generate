@@ -128,7 +128,7 @@ class ModuleFieldEloquent extends BaseEloquent implements ModuleFieldInterface
         $dataFields['module_field_type_id'] = $attributes['module_field_type_id'];
         $dataFields['unique'] = !empty($attributes['unique']) ? 1 : 0;
         $dataFields['required'] = !empty($attributes['required']) ? 1 : 0;
-        $dataFields['default_value'] = $attributes['default_value'] !== '' ? $attributes['default_value'] : '';
+        $dataFields['default_value'] = $attributes['default_value'] !== null ? $attributes['default_value'] : '';
         $dataFields['minlength'] = !empty($attributes['minlength']) ? $attributes['minlength'] : 0;
         if ($fieldTypeName === 'Date') {
             $dataFields['default_value'] = !empty($attributes['default_value'])
