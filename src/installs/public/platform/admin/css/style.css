@@ -175,3 +175,45 @@ div.dataTables_wrapper div.dataTables_length select {
     border: 1px solid #eeeeee;
     padding: 5px;
 }
+
+.warning-language {
+    background-color: rgb(244, 245, 247);
+    border: 1px solid rgb(244, 245, 247);
+    padding: 10px !important;
+    font-size: .85em;
+    cursor: help;
+    border-radius: 3px;
+}
+
+.dot:last-child {
+    display: none;
+}
+
+table.table-bordered.dataTable tbody td {
+    vertical-align: middle;
+}
+
+.nav-sidebar .has-treeview:has(.nav-link.active) > .nav-link i.right {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.nav-sidebar .has-treeview:has(.nav-link.active) > .nav-treeview {
+    display: block;
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
+.sidebar-dark-primary .nav-sidebar > .nav-item.has-treeview:has(.active) > .nav-link
+{
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+
+[class*='sidebar-dark-'] .nav-treeview > .nav-item > .nav-link.active,
+[class*='sidebar-dark-'] .nav-treeview > .nav-item > .nav-link.active:hover {
+    background-color: rgba(255, 255, 255, 0.1);;
+    color: #ffffff;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+}
