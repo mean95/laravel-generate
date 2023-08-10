@@ -125,4 +125,6 @@ $(document).ready(function () {
         });
         return button.render();
     };
+
+    $('.nav-link.active').closest('.has-treeview').addClass('menu-open');
 });

@@ -193,15 +193,6 @@ table.table-bordered.dataTable tbody td {
     vertical-align: middle;
 }
 
-.nav-sidebar .has-treeview:has(.nav-link.active) > .nav-link i.right {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-
-.nav-sidebar .has-treeview:has(.nav-link.active) > .nav-treeview {
-    display: block;
-}
-
 .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
 .sidebar-dark-primary .nav-sidebar > .nav-item.has-treeview:has(.active) > .nav-link
 {
