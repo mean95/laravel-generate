@@ -1,10 +1,12 @@
 <?php
 
+use Core\Facades\ConfigFacade;
 use Illuminate\Support\Facades\Route;
 use Core\Facades\FormFacade;
 use Core\Facades\MenuFacade;
 use Core\Facades\SchemaManagerFacade;
 use Core\Repositories\Contracts\ModuleFieldTypeInterface;
+use Illuminate\Support\Facades\Schema;
 
 if (!function_exists('platform_path')) {
     /**
@@ -25,6 +27,79 @@ if (!function_exists('core_path')) {
     function core_path($path = null): string
     {
         return base_path('core/src' . DIRECTORY_SEPARATOR . $path);
+    }
+}
+
+if (!function_exists('configs')) {
+    /**
+     * @return mixed
+     */
+    function configs()
+    {
+        return ConfigFacade::getFacadeRoot();
+    }
+}
+
+app()->singleton('configs', function () {
+    if (!Schema::hasTable('configs')) {
+        return null;
+    }
+    return configs()->all()->keyBy('key')->toArray();
+});
+
+if (!function_exists('getConfig')) {
+    /**
+     * @param $key
+     * @return \Illuminate\Cache\CacheManager|mixed|null
+     * @throws Exception
+     * @author Rent
+     * @since 1.0
+     */
+    function getConfig($key)
+    {
+        $configs = app('configs');
+        $config = !empty($configs[$key]) ? (object) $configs[$key] : null;
+        return $config->value ?? null;
+    }
+}
+
+if (!function_exists('updateConfig')) {
+    /**
+     * @param $key
+     * @param $value
+     * @return bool
+     * @throws Exception
+     */
+    function updateConfig($key, $value)
+    {
+        configs()->updateOrCreate(
+            ['key' => $key],
+            [
+                'key' => $key,
+                'value' => $value,
+            ]
+        );
+        return true;
+    }
+}
+
+if (!function_exists('getListTimeZone')) {
+    /**
+     * Get list time zone.
+     *
+     * @return array
+     * @author Rent
+     */
+    function getListTimeZone(): array
+    {
+        $zones_array = array();
+        $timestamp = time();
+        foreach (timezone_identifiers_list() as $key => $zone) {
+            date_default_timezone_set($zone);
+            $zones_array[$key]['zone'] = $zone;
+            $zones_array[$key]['diff_from_GMT'] = 'UTC/GMT ' . date('P', $timestamp);
+        }
+        return $zones_array;
     }
 }
 

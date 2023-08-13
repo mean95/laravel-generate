@@ -3,7 +3,8 @@
 namespace Core\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Core\Models\Config;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class ConfigController extends Controller
@@ -11,76 +12,35 @@ class ConfigController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return View
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $timeZones = getListTimeZone();
+        return view('core::admin.configs.index', [
+            'timeZones' => $timeZones
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse
+     * @throws \Exception
      */
     public function store(Request $request)
     {
-        //
-    }
+        unset($request['_token']);
+        foreach ($request->except(['_token']) as $key => $value) {
+            $valueBefore = getConfig($key);
+            if ($value !== $valueBefore) {
+                updateConfig($key, $value);
+            }
+        }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Config $config)
-    {
-        //
-    }
+        $request->session()->flash('success', trans('core::admin.flash_message.update_success'));
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Config $config)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Config $config)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Config  $config
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Config $config)
-    {
-        //
+        return back();
     }
 }

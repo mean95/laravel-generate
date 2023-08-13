@@ -81,6 +81,9 @@ Route::group(['prefix' => getPrefix(), 'as' => getPrefix() . '.'], function () {
         Route::get('ajax/module_fields/unique_field_value', 'ModuleFieldController@uniqueFieldValue')
             ->name('ajax.module_fields.unique_field_value');
 
+        Route::get('/config', 'ConfigController@index')->name('configs.index');
+        Route::post('/config/store', 'ConfigController@store')->name('configs.store');
+
         /* ================== Roles ================== */
         Route::resource('roles', 'RoleController');
     });

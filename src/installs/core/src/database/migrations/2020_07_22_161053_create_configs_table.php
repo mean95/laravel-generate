@@ -17,7 +17,7 @@ class CreateConfigsTable extends Migration
             $table->id();
             $table->string('key', 50);
 			$table->string('section', 100)->default("");
-            $table->string('value', 255);
+            $table->string('value', 255)->nullable();
             $table->timestamps();
         });
     }

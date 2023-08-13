@@ -208,3 +208,10 @@ table.table-bordered.dataTable tbody td {
 .nav-pills .nav-link {
     border-radius: 0;
 }
+
+
+.flexbox-section + .flexbox-section {
+    margin-top: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid #d3dbe2;
+}

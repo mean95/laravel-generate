@@ -5,6 +5,7 @@ namespace Core\Providers;
 use Core\Repositories\Contracts\AdminMenuInterface;
 use Core\Repositories\Contracts\AdminUserInterface;
 use Core\Repositories\Contracts\BaseInterface;
+use Core\Repositories\Contracts\ConfigInterface;
 use Core\Repositories\Contracts\ModuleFieldInterface;
 use Core\Repositories\Contracts\ModuleFieldTypeInterface;
 use Core\Repositories\Contracts\ModuleInterface;
@@ -13,6 +14,7 @@ use Core\Repositories\Contracts\RoleInterface;
 use Core\Repositories\Eloquent\AdminMenuEloquent;
 use Core\Repositories\Eloquent\AdminUserEloquent;
 use Core\Repositories\Eloquent\BaseEloquent;
+use Core\Repositories\Eloquent\ConfigEloquent;
 use Core\Repositories\Eloquent\ModuleEloquent;
 use Core\Repositories\Eloquent\ModuleFieldEloquent;
 use Illuminate\Support\ServiceProvider;
@@ -43,6 +45,9 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             BaseInterface::class, BaseEloquent::class
+        );
+        $this->app->bind(
+            ConfigInterface::class, ConfigEloquent::class
         );
         $this->app->bind(
             AdminMenuInterface::class, AdminMenuEloquent::class
