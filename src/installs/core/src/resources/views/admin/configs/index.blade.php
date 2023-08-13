@@ -33,7 +33,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label for="admin_email">{{ trans('core::admin.label.email_admin') }}</label>
-                                    <input type="email" class="form-control" autocomplete="off" value="{{ getConfig('email_admin') }}" name="admin_email" placeholder="your-email@gmail.com">
+                                    <input type="email" class="form-control" autocomplete="off" value="{{ getConfig('admin_email') }}" name="admin_email" placeholder="your-email@gmail.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="time_zone">{{ trans('core::admin.label.time_zone') }}</label>
