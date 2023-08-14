@@ -36,6 +36,13 @@
                                     <input type="email" class="form-control" autocomplete="off" value="{{ getConfig('admin_email') }}" name="admin_email" placeholder="your-email@gmail.com">
                                 </div>
                                 <div class="form-group">
+                                    <label for="date_format">{{ trans('core::admin.label.date_format') }}</label>
+                                    <input type="text" class="form-control" name="date_format" value="{{ getConfig('date_format') }}">
+                                    <div class="mt-2">
+                                        {{ trans('core::admin.warning.date_format') }} <code>M d, o</code>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="time_zone">{{ trans('core::admin.label.time_zone') }}</label>
                                     <select class="form-control select2" name="time_zone" style="width: 100%;">
                                         <option value="0">None</option>

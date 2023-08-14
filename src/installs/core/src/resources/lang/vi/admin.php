@@ -25,6 +25,7 @@ return [
     'label' => [
         'general_information' => 'Thông tin chung',
         'email_admin' => 'Email quản trị viên',
+        'date_format' => 'Định dạng ngày tháng',
         'time_zone' => 'Múi giờ',
         'site_title' => 'Tiêu đề trang web',
         'seo_title' => 'Tiêu đề SEO',
@@ -64,6 +65,7 @@ return [
         'setting_site_information' => 'Cấu hình thông tin trang web',
         'setting_logo' => 'Cấu hình logo trang web',
         'setting_social' => 'Cấu hình thông tin mạng xã hội',
+        'date_format' => 'Định dạng ngày hệ thống. Mặc định:',
     ],
     'flash_message' => [
         'success' => 'Thành công',

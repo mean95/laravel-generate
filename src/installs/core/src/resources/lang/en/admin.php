@@ -25,6 +25,7 @@ return [
     'label' => [
         'general_information' => 'General Information',
         'email_admin' => 'Email Admin',
+        'date_format' => 'Date format',
         'time_zone' => 'Time Zone',
         'site_title' => 'Site Title',
         'seo_title' => 'SEO Title',
@@ -64,6 +65,7 @@ return [
         'setting_site_information' => 'Setting site information',
         'setting_logo' => 'Setting site logo',
         'setting_social' => 'Setting site social',
+        'date_format' => 'System date format. Default:',
     ],
     'flash_message' => [
         'success' => 'Succeeded',

@@ -194,7 +194,8 @@ if (!function_exists('formatDateTime')) {
      */
     function formatDateTime($dateTime): string
     {
-        return $dateTime ? date('d/m/Y', strtotime($dateTime)) : '';
+        $format = getConfig('date_format') ?? 'd/m/Y';
+        return $dateTime ? date($format, strtotime($dateTime)) : '';
     }
 }
 

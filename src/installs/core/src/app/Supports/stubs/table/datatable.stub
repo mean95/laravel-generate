@@ -33,7 +33,7 @@ class __model_class_name__DataTable extends DataTable
         return datatables()
             ->eloquent($this->query())
             ->editColumn('updated_at', function ($item) {
-                return date('d/m/Y', strtotime($item->updated_at));
+                return formatDateTime($item->updated_at);
             })
             ->editColumn('operations', function ($item) {
                 return view('core::admin.common.operation', [
