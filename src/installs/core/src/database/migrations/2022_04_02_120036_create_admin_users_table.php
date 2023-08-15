@@ -15,15 +15,16 @@ class CreateAdminUsersTable extends Migration
     {
         Schema::create('admin_users', function (Blueprint $table) {
             $table->id();
-            $table->string('username', 20)->unique();
-            $table->string('first_name', 80);
-            $table->string('last_name', 80);
-            $table->string('email', 200)->unique();
-            $table->string('password', 100);
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('avatar', 255)->nullable();
-            $table->integer('status')->default(0);
+            $table->string("username", 20)->unique();
+            $table->string("first_name", 80);
+            $table->string("last_name", 80);
+            $table->string("email", 255)->unique();
+            $table->string("password", 255);
+            $table->timestamp("email_verified_at");
+            $table->string("avatar", 255)->nullable();
+            $table->string("status")->default("0");
             $table->rememberToken();
+            $table->text("about")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

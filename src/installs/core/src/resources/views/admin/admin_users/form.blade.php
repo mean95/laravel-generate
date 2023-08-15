@@ -59,6 +59,20 @@
     @enderror
 </div>
 <div class="form-group">
+    {{ Form::label('email', trans('core::admin_user.form.about.label')) }}
+    <span class="star-required">*</span>
+    {{
+        Form::textarea('about',  old('about', $user->about ?? ''), [
+            'class' => 'form-control form-control-sm',
+            'placeholder' => trans('core::admin_user.form.about.placeholder'),
+            'required' => '',
+        ])
+    }}
+    @error('about')
+    <span class="error">{{ $message }}</span>
+    @enderror
+</div>
+<div class="form-group">
     {{ Form::label('type', trans('core::admin_user.form.role.label')) }}
     {{
         Form::select('role[]', $roles->pluck('name', 'id'), old('role', !empty($user) ? $user->adminUserRole->pluck('role_id') : []), [
