@@ -104,7 +104,7 @@
                                     </div>
                                     <div class="file-preview" style="margin-top:15px">
                                         @if(!empty(getConfig('theme_logo')))
-                                            <img src="{{ getUrlFileThumbnail(getConfig('theme_logo')) }}"/>
+                                            <img src="{{ getUrlFile(getConfig('theme_logo')) }}"/>
                                         @endif
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@
                                     </div>
                                     <div class="file-preview" style="margin-top:15px">
                                         @if(!empty(getConfig('theme_favicon')))
-                                            <img src="{{ getUrlFileThumbnail(getConfig('theme_favicon')) }}"/>
+                                            <img src="{{ getUrlFile(getConfig('theme_favicon')) }}"/>
                                         @endif
                                     </div>
                                 </div>
