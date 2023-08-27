@@ -432,7 +432,9 @@ Trait ModuleTrait
                         }
                     }
                     if (is_string($field->popup_val) && startsWith($field->popup_val, "@")) {
+                        $foreignTableName = str_replace("@", "", $field->popup_val);
                         $var = '$table->unsignedBigInteger("' . $field->column_name . '")';
+                        $var .= ";\n\t\t\t" . '$table->foreign("' . $field->column_name . '")->references("id")->on("' . $foreignTableName . '")->onDelete("cascade")';
                         break;
                     }
                     $popup_val = json_decode($field->popup_val);
@@ -505,7 +507,7 @@ Trait ModuleTrait
                         if ($field->default_value !== '') {
                             $var .= '->default("' . $field->default_value . '")';
                         }
-                        $var .= ";\n\t\t\t" . '$table->foreign("' . $field->column_name . '")->references("id")->on("' . $foreignTableName . '")';
+                        $var .= ";\n\t\t\t" . '$table->foreign("' . $field->column_name . '")->references("id")->on("' . $foreignTableName . '")->onDelete("cascade")';
                     } elseif (is_array($popup_val)) {
                         $var .= '$table->string("' . $field->column_name . '")';
                         if ($field->default_value !== '') {
