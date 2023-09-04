@@ -62,6 +62,9 @@ trait ModuleFieldTrait
                     if ($field->default_value !== '') {
                         $var->default($field->default_value);
                     }
+                    if ($field->required === 0) {
+                        $var->nullable();
+                    }
                     $table->foreign($field->column_name)->references('id')->on($foreignTableName)->onDelete('cascade');
                 }
                 $popup_val = json_decode($field->popup_val);
@@ -315,8 +318,10 @@ trait ModuleFieldTrait
                 if (startsWith($field->popup_val, "@")) {
                     $foreignTableName = str_replace("@", "", $field->popup_val);
                     $var = $table->unsignedBigInteger($field->column_name)->change();
-                    $defaultValue = is_int($field->default_value) ? $field->default_value : 1;
-                    $var->default($defaultValue);
+                    $this->setDefaultValue($field->default_value, $var);
+                    if ($field->required === 0) {
+                        $var->nullable();
+                    }
                     $table->foreign($field->column_name)->references('id')->on($foreignTableName)->onDelete('cascade');
                 }
                 if (is_array($popup_val)) {
@@ -366,8 +371,10 @@ trait ModuleFieldTrait
                 if (startsWith($field->popup_val, "@")) {
                     $foreignTableName = str_replace("@", "", $field->popup_val);
                     $var = $table->unsignedBigInteger($field->column_name)->change();
-                    $defaultValue = is_int($field->default_value) ? $field->default_value : 1;
-                    $var->default($defaultValue);
+                    $this->setDefaultValue($field->default_value, $var);
+                    if ($field->required === 0) {
+                        $var->nullable();
+                    }
                     $table->foreign($field->column_name)->references('id')->on($foreignTableName)->onDelete('cascade');
                 }
                 if (is_array($popup_val)) {

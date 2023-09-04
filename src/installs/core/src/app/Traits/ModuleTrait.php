@@ -434,6 +434,12 @@ Trait ModuleTrait
                     if (is_string($field->popup_val) && startsWith($field->popup_val, "@")) {
                         $foreignTableName = str_replace("@", "", $field->popup_val);
                         $var = '$table->unsignedBigInteger("' . $field->column_name . '")';
+                        if ($field->default_value !== '') {
+                            $var .= '->default("' . $field->default_value . '")';
+                        }
+                        if ($field->required === 0) {
+                            $var .= '->nullable()';
+                        }
                         $var .= ";\n\t\t\t" . '$table->foreign("' . $field->column_name . '")->references("id")->on("' . $foreignTableName . '")->onDelete("cascade")';
                         break;
                     }
@@ -506,6 +512,9 @@ Trait ModuleTrait
                         $var = '$table->bigInteger("' . $field->column_name . '")->unsigned()';
                         if ($field->default_value !== '') {
                             $var .= '->default("' . $field->default_value . '")';
+                        }
+                        if ($field->required === 0) {
+                            $var .= '->nullable()';
                         }
                         $var .= ";\n\t\t\t" . '$table->foreign("' . $field->column_name . '")->references("id")->on("' . $foreignTableName . '")->onDelete("cascade")';
                     } elseif (is_array($popup_val)) {
